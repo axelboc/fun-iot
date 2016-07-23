@@ -1,0 +1,23 @@
+{
+  "name": "fun-iot",
+  "version": "0.0.1",
+  "description": "Wio Link playground",
+  "author": "Axel Bocciarelli",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axelboc/fun-iot.git"
+  },
+  "engines": {
+    "node": "^6.3.0",
+    "npm": "^3.10.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.13.1",
+    "dotenv": "^2.0.0",
+    "winston": "^2.2.0"
+  }
+}
