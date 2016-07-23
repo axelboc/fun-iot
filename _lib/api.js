@@ -37,7 +37,21 @@ function listNodes(userToken) {
   });
 }
 
+function getWellKnown(nodeToken) {
+  return axios.get(`${API_URL}/node/.well-known`, {
+    headers: { 'Authorization': nodeToken }
+  });
+}
+
+function readValue(nodeToken, name, property, ...args) {
+  return axios.get(`${API_URL}/node/${name}/${property}/${args.join('/')}`, {
+    headers: { 'Authorization': nodeToken }
+  });
+}
+
 module.exports = {
   login,
-  listNodes
+  listNodes,
+  getWellKnown,
+  readValue
 }
