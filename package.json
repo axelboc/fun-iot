@@ -13,11 +13,14 @@
     "npm": "^3.10.3"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "wk": "node index.js --wk"
   },
   "dependencies": {
     "axios": "^0.13.1",
     "dotenv": "^2.0.0",
-    "winston": "^2.2.0"
+    "open": "0.0.5",
+    "winston": "^2.2.0",
+    "ws": "^3.0.0"
   }
 }

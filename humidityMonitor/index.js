@@ -12,9 +12,10 @@ function start(node) {
     api.readValue(token, TEMP_HUM, 'temperature')
   ])
     .then(([{ humidity }, { celsius_degree }]) => {
-      console.info('[HumidityMonitor] humidity=', humidity);
+      console.info('[HumidityMonitor] humidity=', humidity + process.env.HUM_OFFSET);
       console.info('[HumidityMonitor] temperature=', celsius_degree);
-    });
+    })
+    .catch(api.error);
 }
 
 
